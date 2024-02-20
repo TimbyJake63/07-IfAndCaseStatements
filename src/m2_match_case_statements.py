@@ -1,5 +1,5 @@
 ###############################################################################
-# TODO: 1. (3 pts)
+# DONE: 1. (3 pts)
 #
 #   Write a function called color_picker() that prints out a message to a user.
 #
@@ -16,9 +16,24 @@
 #
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
+def color_picker():
+    txt = input("Enter Color: ")
+    match txt:
+        case "red":
+            print("Gotta love red")
+        case "blue":
+            print("Let's goooooooo, best color no question")
+        case "green":
+            print("ok ok I like it I guess, it's not too bad")
+        case "yellow":
+            print("What a horrible choice")
+        case "purple":
+            print("just fun to ykyk")
+        case _:
+            print("Prolly forgot to put in that color or you're just stupid and didn't read the question")
 
 ###############################################################################
-# TODO: 2. (3 pts)
+# DONE: 2. (3 pts)
 #
 #   Write a function called grade() that tells a student what letter grade they
 #   got on an assignment based on the percentage they indicate.
@@ -36,3 +51,21 @@
 #
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
+def grade():
+    grade=float (input("Enter percentage for assignment in decimal form (i.e. .85 for 85%): "))
+    match grade:
+        case _ if 0.9 <= grade <=1.0:
+            print("You got an A!")
+        case _ if 0.8 <= grade <0.9:
+            print("You got a B!")
+        case _ if 0.7 <= grade <0.8:
+            print("You got an C!")
+        case _ if 0.6 <= grade <0.7:
+            print("You got an D!")
+        case _ if 0.0 <= grade <0.6:
+            print("You got an F, Failure haha!")
+        case _:
+            print("Invalid Score!")
+grade()
+            
+

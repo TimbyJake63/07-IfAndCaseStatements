@@ -1,5 +1,17 @@
+import math
+def addition(x,y):
+    return (x+y)
+
+def subtraction(x,y):
+    return (x-y)
+
+def division(x,y):
+    return (x/y)
+
+def multiplication(x,y):
+    return (x*y)
 ###############################################################################
-# TODO: 1. (4 pts)
+# DONE: 1. (4 pts)
 #
 #   In this module, we will improve upon the calculator that we built in the
 #   Session 5 coding exercises.
@@ -39,9 +51,26 @@
 #
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
+def Main():
+    username= input("enter username")
+    print(f"What's up {username}?! How've you been?!")
+    X= int(input("enter first number"))
+    Y= int(input("enter second number"))
+    sign= input("Which operation would you like to use? (+)Add (-)Subtract (*)Multiply (/)Division: ")
+    if sign == "+":
+        print(addition(X,Y))
+    elif sign == "-":
+        print(subtraction(X,Y))
+    elif sign == "/":
+        print(division(X,Y))
+    elif sign == "*":
+        print(multiplication(X,Y))
+    else:
+        print("Invalid Operation!")
 
+Main()
 ###############################################################################
-# TODO: 2. (4 pts)
+# DONE: 2. (4 pts)
 #
 #   Now, do the same thing that you did in _TODO_ 1, but this time, use case
 #   statements in your solution instead of if statements.
@@ -51,3 +80,21 @@
 #
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
+def case_calc():
+    username= input("enter username")
+    print(f"What's up {username}?! How've you been?!")
+    X= int(input("enter first number"))
+    Y= int(input("enter second number"))
+    sign= input("Which operation would you like to use? (+)Add (-)Subtract (*)Multiply (/)Division: ")
+    match sign:
+        case "+":
+            print(addition(X,Y))
+        case "-":
+            print(subtraction(X,Y))
+        case "/":
+            print(division(X,Y))
+        case "*":
+            print(multiplication(X,Y))
+        case _:
+            print("Invalid Operation!")
+case_calc()

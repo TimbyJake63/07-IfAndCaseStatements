@@ -1,7 +1,7 @@
 txt = "The quick brown fox jumps over the lazy dog."
 
 ###############################################################################
-# TODO: 1. (2 pts)
+# DONE: 1. (2 pts)
 #
 #   Write a function called is_positive() that takes one parameter:
 #     - number (float)
@@ -13,9 +13,13 @@ txt = "The quick brown fox jumps over the lazy dog."
 #
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
-
+def is_positive(number: float):
+    if number >= 0:
+        return True
+    else:
+        return False
 ###############################################################################
-# TODO: 2. (2 pts)
+# DONE: 2. (2 pts)
 #
 #   Write a function called contains() that takes two parameters:
 #     - str (string)
@@ -32,9 +36,13 @@ txt = "The quick brown fox jumps over the lazy dog."
 #
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
-
+def contains(str: str, substr: str):
+    if substr in str:
+        return True
+    else:
+        return False
 ###############################################################################
-# TODO: 3. (3 pts)
+# DONE: 3. (3 pts)
 #
 #   Write a function called display_rating() that takes one parameter:
 #     - rating (float)
@@ -63,3 +71,16 @@ txt = "The quick brown fox jumps over the lazy dog."
 #
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
+def display_rating(rating: float):
+    if 4 <= rating <= 5:
+        print(f"Congratulations! You received a score of {rating}.")
+    elif 3 <= rating < 4:
+        print(f"You're doing well. You received a score of {rating}.")
+    elif 2 <= rating < 3:
+        print(f"You could use some improvement. You received a score of {rating}.")
+    elif 1 <= rating < 2:
+        print(f"You need significant improvement. You received a score of {rating}.")
+    else:
+        print("Invalid score given.")
+
+#Help from Chat GPT to figure out how to define parameter type
